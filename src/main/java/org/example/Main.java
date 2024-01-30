@@ -13,9 +13,10 @@ public class Main {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         for (String key : stocks.keySet()){
-            //int value = stocks.get(key);
-            System.out.println(key);
+            int value = stocks.get(key);
+            System.out.println(key + "の在庫数は" + value + "個です");
         }
+
         System.out.println("在庫数が知りたい消耗品の名前を入力してください");
         try{
             String item = new java.util.Scanner(System.in).nextLine();
@@ -24,7 +25,5 @@ public class Main {
         } catch (Exception e){
             System.out.println("正しい名前を記入してください");
         }
-        //int number = stocks.get(item);
-        //System.out.println(item + "の在庫数は" + number + "個です");
     }
 }
